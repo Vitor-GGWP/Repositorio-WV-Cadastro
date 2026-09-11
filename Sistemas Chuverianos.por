@@ -36,6 +36,11 @@ programa{
         escreva("Digite sua escolha: ")
         leia(chuveiro)
 
+        // Chuveiro a gás gasta 1,5 vezes mais água
+        se (chuveiro == 2) {
+            litros = litros * 1.5
+        }
+
         gasto = tempo * litros
 
         escreva("\n=== Resultado ===\n")
