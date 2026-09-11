@@ -3,7 +3,7 @@ programa{
     funcao inicio()
     {
         real tempo, litros, gasto
-        inteiro intensidade
+        inteiro intensidade, chuveiro
 
         escreva("=== Cálculo de água gasta no banho ===\n")
         escreva("Digite quantos minutos você ficou no banho: ")
@@ -30,8 +30,25 @@ programa{
             escreva("\nOpção inválida! Será usada a intensidade Normal.\n")
         }
 
+        escreva("\nQual tipo de chuveiro você possui?\n")
+        escreva("1 - Chuveiro elétrico\n")
+        escreva("2 - Chuveiro a gás\n")
+        escreva("Digite sua escolha: ")
+        leia(chuveiro)
+
         gasto = tempo * litros
 
-        escreva("\nVocê gastou aproximadamente ", gasto, " litros de água.")
+        escreva("\n=== Resultado ===\n")
+        escreva("Você gastou aproximadamente ", gasto, " litros de água.\n")
+
+        se (chuveiro == 1) {
+            escreva("Tipo de chuveiro: Elétrico")
+        }
+        senao se (chuveiro == 2) {
+            escreva("Tipo de chuveiro: A gás")
+        }
+        senao {
+            escreva("Tipo de chuveiro: Opção inválida")
+        }
     }
 }
